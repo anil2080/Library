@@ -70,6 +70,13 @@
 		});
 	}
 
+            function fncDeletePeriodicalLoadPage() {
+        		
+        		$('#content').load('<?php echo SITE_PATH?>index.php?controller=admin&function=MenuDeletePeriodical_Click', function() {
+
+        		});
+        	}
+
             function fncFineTodayLoadPage() {
             	
         		$('#content').load('<?php echo SITE_PATH?>index.php?controller=admin&function=ImgFineToday_Click', function() {
@@ -113,7 +120,7 @@
 			<li><a href="" title="Member">Member</a>
 				<ul id="nav" style="display: none;">
 					<li><a href="javascript:void(0)" onclick="fncAddMemberLoadPage()"
-						 title="Add">Add member</a></li>
+						 title="Add">Add m</a></li>
 					<li><a href="javascript:void(0)" onclick="fncUpdateMemberLoadPage()"
                                                title="UpdateMember">Update M</a></li>
 					<li><a href="javascript:void(0)" onclick=" fncDeleteMemberLoadPage()"
@@ -134,11 +141,12 @@
 					<li><a href="" title="Delete projects">Delete</a></li>
 				</ul></li>
 
-			<li><a href="" title="Projects">Reports</a>
+			<li><a href="" title="Projects">Periodical</a>
 				<ul id="nav" style="display: none;">
-					<li><a href="" title="AddUpload">Add</a></li>
-					<li><a href="" title="UpdateUpload">Update</a></li>
-					<li><a href="" title="DeleteUpload">Delete</a></li>
+					<li><a href="" title="AddPeriodical">Add</a></li>
+					<li><a href="" title="UpdatePeriodical">Update</a></li>
+					<li><a href="javascript:void(0)" onclick="fncDeletePeriodicalLoadPage()"
+                                             title="DeletePeriodical">Delete</a></li>
 				</ul></li>
 
 			<li><a href="" title="Projects">Contacts</a>

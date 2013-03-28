@@ -3,8 +3,8 @@ define('DOC_ROOT',$_SERVER['DOCUMENT_ROOT']);
 
 //xampp/phpnetbeans/library18/library18/
 
-define('SITE_ROOT',DOC_ROOT.'/libr/');
-define('SITE_PATH','http://'.$_SERVER['HTTP_HOST'].'/libr/');
+define('SITE_ROOT',DOC_ROOT.'/github/abc/Library/trunk/libr/');
+define('SITE_PATH','http://'.$_SERVER['HTTP_HOST'].'/github/abc/Library/trunk/libr/');
 define('IMAGE_PATH',SITE_PATH.'images/');
 define('CSS_PATH',SITE_PATH.'css/');
 define('JS_PATH',SITE_PATH.'js/');

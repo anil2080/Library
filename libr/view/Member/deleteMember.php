@@ -1,6 +1,6 @@
 <html>
 <head>
-<title> UPDATE MEMBER DETAILS</title>
+<title> DELETE MEMBER DETAILS</title>
 
 <link rel="stylesheet" type="text/css" href="style.css" />
 <script type="C:\xampp\htdocs\xampp\Library_management\jquery-1.9.1.min"></script>

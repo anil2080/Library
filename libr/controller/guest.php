@@ -7,7 +7,7 @@ class guestController {
 	
 	function homePage(){
 		//load view
-		loadView('/homePage/afterLogin.php');
+		loadView('/homePage/Beforelogin.php');
 			//echo "hello";
 	}
 	
