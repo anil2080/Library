@@ -7,7 +7,7 @@ class DBConnection {
     private static $instance;
     private static $_host = "localhost";
     private static $_user = "root";
-    private static $_password = "anil";
+    private static $_password = "root";
     private static $_database = "oss";// database name will be fetched from the database related from name in url
     private $_tableName = "";
 	private $_join = "";
@@ -74,7 +74,7 @@ class DBConnection {
                 
             }
         }
-        echo "connecting";
+//        echo "connecting";
         return self::$instance;
     }
 
@@ -275,7 +275,7 @@ class DBConnection {
 			if (!empty($this->_orderBy)) {
                 $this->_query .= $this->_orderBy;
             }
-			echo $this->_query ."<br/>"; 
+			//echo $this->_query ."<br/>"; 
 			// if(empty($this->_transaction))//ani
 // {
             $this->_result = mysql_query($this->_query);

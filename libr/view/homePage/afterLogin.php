@@ -24,7 +24,14 @@
 	height: 300px;
 }
 </style>
+<script >
+
+
+</script>
 <script>
+
+
+
 	$(function() {
 		$( "#accordion" ).accordion({
 			heightStyle: "fill"
@@ -70,19 +77,13 @@
 		});
 	}
 
-            function fncDeletePeriodicalLoadPage() {
-        		
-        		$('#content').load('<?php echo SITE_PATH?>index.php?controller=admin&function=MenuDeletePeriodical_Click', function() {
-
-        		});
-        	}
-
             function fncFineTodayLoadPage() {
             	
         		$('#content').load('<?php echo SITE_PATH?>index.php?controller=admin&function=ImgFineToday_Click', function() {
 
         		});
         	}
+            
         
 	</script>
 
@@ -91,6 +92,8 @@
 <body class="body-main">
 	<!-- start header -->
 	<!-- top text start -->
+	
+	
 	<div id="header">
 		<h1>
 			<a href="">Library And Its Magics..</a>
@@ -120,7 +123,7 @@
 			<li><a href="" title="Member">Member</a>
 				<ul id="nav" style="display: none;">
 					<li><a href="javascript:void(0)" onclick="fncAddMemberLoadPage()"
-						 title="Add">Add m</a></li>
+						 title="Add">Add member</a></li>
 					<li><a href="javascript:void(0)" onclick="fncUpdateMemberLoadPage()"
                                                title="UpdateMember">Update M</a></li>
 					<li><a href="javascript:void(0)" onclick=" fncDeleteMemberLoadPage()"
@@ -141,12 +144,11 @@
 					<li><a href="" title="Delete projects">Delete</a></li>
 				</ul></li>
 
-			<li><a href="" title="Projects">Periodical</a>
+			<li><a href="" title="Projects">Reports</a>
 				<ul id="nav" style="display: none;">
-					<li><a href="" title="AddPeriodical">Add</a></li>
-					<li><a href="" title="UpdatePeriodical">Update</a></li>
-					<li><a href="javascript:void(0)" onclick="fncDeletePeriodicalLoadPage()"
-                                             title="DeletePeriodical">Delete</a></li>
+					<li><a href="" title="AddUpload">Add</a></li>
+					<li><a href="" title="UpdateUpload">Update</a></li>
+					<li><a href="" title="DeleteUpload">Delete</a></li>
 				</ul></li>
 
 			<li><a href="" title="Projects">Contacts</a>
@@ -644,3 +646,4 @@
 	<!-- body end	 -->
 </body>
 </html>
+

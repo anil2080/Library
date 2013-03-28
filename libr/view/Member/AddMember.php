@@ -2,8 +2,8 @@
 <head>
 <title>ADD MEMBER DETAILS</title>
 
-<link rel="stylesheet" type="text/css" href="style.css" />
-<script type="C:\xampp\htdocs\xampp\Library_management\jquery-1.9.1.min"></script>
+<!-- <link rel="stylesheet" type="text/css" href="style.css" /> -->
+<!-- <script type="C:\xampp\htdocs\xampp\Library_management\jquery-1.9.1.min"></script> -->
 <!-- <script type="text/javascript">
 $(document).ready(function() {
     $("#frmSubmit").click(function() {
@@ -11,6 +11,31 @@ $(document).ready(function() {
     });
 });
 </script> -->
+<script>
+
+
+$("#idMemberCourse1").click(function() {
+
+	  $.getJSON('<?php echo SITE_PATH?>index.php?controller=admin&function=LoadCourse',function(result){
+
+		  $('#idMemberCourse1').html("");
+		  
+		  
+		    $.each(result, function(i, field){
+// 		      alert(field['name']);
+              
+		      $('#idMemberCourse1').append('<option value="'+field['name']+'">'+field['name']+'</option>');
+		    });
+		  });
+
+
+
+		
+	
+});
+
+
+</script>
 </head>
 <body>
 	<div id="outerDiv">
@@ -25,9 +50,13 @@ $(document).ready(function() {
 					<table id="frmTable">
 						<tr>
 							<td><p>id*</p></td>
-							<td><input type="text" name="id" /></td>
+							<td>
+							<input type="text" name="id" /> 
+
+							</td>
 							<td><p>Member Name*</p></td>
-							<td><input type="text" name="member_name" required="required" /></td>
+							<td><input type="text" name="member_name" required="required" "
+								/></td>
 						</tr>
 						<tr>
 							<td><p>department*</p></td>
@@ -36,8 +65,13 @@ $(document).ready(function() {
 							<td><input type="text" name="year_of_joining" /></td>
 						</tr>
 						<tr>
-							<td><p>Course Id*</p></td>
-							<td><input type="text" name="course_id" /></td>
+							<td><p>Courses *</p></td>
+							<td> 
+							<select id="idMemberCourse1">
+							<option></option>
+							</select>
+							</td>
+							<td><input type="text" id="idMemberCourse" name="course_id" /></td>
 							<td><p>University*</p></td>
 							<td><input type="number" name="university" min="1" /></td>
 						</tr>

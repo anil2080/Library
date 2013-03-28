@@ -39,13 +39,30 @@ class CourseModel extends dbModel {
          if(count($ReturnArray)>0)
          {
              return $ReturnArray;
-
          }
          else 
          {
              return NULL;
          }
     }
+    
+    
+    function ReturnCourseName($where = NULL) {
+        if($where == null) {
+            $this->db->Fields(array('name'))->From('course')->Select();
+            $ReturnArray=$this->db->resultArray();
+//             print_r("<pre>");
+//             print_r($ReturnArray);
+//             die;
+            return $ReturnArray;
+        }
+        else {
+            $this->db->Fields(array('name'))->Where($where)->From('course')->Select();
+            $ReturnArray=$this->db->resultArray();
+            return $ReturnArray;
+        }
+    }
+    
     
     public function InsertId($values) {
         $this->db->Fields(array('name'=>$values))->From('course')->Insert();

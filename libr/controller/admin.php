@@ -1,87 +1,79 @@
 <?php
 
-class adminController
-{
 
-    public function authenticatelogin ()
-    {
-        loadView('homePage/afterLogin.php');
-    }
+ 
+class adminController {
+	
 
-    public function MenuAddBook_Click ()
-    {
-        // die("this is raman");
-        loadView('book/AddBook.php');
-    }
+	public function MenuAddBook_Click() {
+// 		die("this is raman");
+		loadView('book/AddBook.php');
+	}
+	
+	public function MenuAddMember_Click()
+	{
+	    loadView('Member/AddMember.php');
+	}
+	
+	public function AddBook_Click() {
+		
+		loadModel('bookLogic','insertBook',$_POST);
+	}
+	public function AddMember_Click() {
+// 	    echo"dwvdwv";
+// 	    die;
+	    loadModel('Member','InsertMember',$_POST);
+	}
+	
+        public function MenuUpdateMember_Click()
+	{
+	    loadView('Member/updateMember.php');
+	}
+        
+        public function MenuDeleteMember_Click()
+        {
+             loadView('Member/deleteMember.php');
+        }
+       public function UPDATEMember_Click()
+       {
+//            echo"dwvdwv";
+//	    die;
+	    loadModel('Member','UpdateMember',$_POST);
+       }
+       
+        public function DELETEMember_Click()
+       {
+//            echo"dwvdwv";
+//	    die;
+	    loadModel('Member','DeleteMember',$_POST);
+       }
+       
+	public function LoadCourse() {
+	    //echo "hello";
+	  echo json_encode( loadModel('Course','ReturnCourseName') );
 
-    public function MenuAddMember_Click ()
-    {
-        loadView('Member/AddMember.php');
-    }
+	}
+	
+	public function UpdateBook_Click() {
+		
+	}	
+	
+	public function search_Click() {	
+		
+	}
+	
+	public function createReport() {
+		// report class object
+	}
+	
+	public function ImgFineToday_Click() {
+	    loadView('Fine.php');
+	}
+	
+	public function Fine_Load() {
+	    die("hello");
+	}
 
-    public function MenuDeletePeriodical_Click()
-    {
-        loadView('Periodical/DeletePeriodical.php');
-    }
-    
-    public function AddBook_Click ()
-    {
-        loadModel('bookLogic', 'insertBook', $_POST);
-    }
-
-    public function AddMember_Click ()
-    {
-        loadModel('Member', 'InsertMember', $_POST);
-    }
-
-    public function MenuUpdateMember_Click ()
-    {
-        loadView('Member/updateMember.php');
-    }
-
-    public function MenuDeleteMember_Click ()
-    {
-        loadView('Member/deleteMember.php');
-    }
-
-    public function UPDATEMember_Click ()
-    {
-        loadModel('Member', 'UpdateMember', $_POST);
-    }
-
-    public function DELETEMember_Click ()
-    {
-        loadModel('Member', 'DeleteMember', $_POST);
-    }
-
-    
-    public function DELETEPeriodical_Click ()
-    {
-        loadModel('Periodical', 'DeletePeriodical', $_POST);
-    }
-    public function DeleteBook_Click ()
-    {}
-
-    public function UpdateBook_Click ()
-    {}
-
-    public function search_Click ()
-    {}
-
-    public function createReport ()
-    {
-        // report class object
-    }
-
-    public function ImgFineToday_Click ()
-    {
-        loadView('Fine.php');
-    }
-
-    public function Fine_Load ()
-    {
-        die("hello");
-    }
 }
 
 
@@ -164,3 +156,4 @@ class adminController
 // 	$obj=new Book();
 // 	$obj->updateBook($arraywhere);
 // }
+
