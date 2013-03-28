@@ -102,7 +102,7 @@ function fncDeletePeriodicalLoadPage() {
 
 
 </head>
-<body class="body-main">
+<body id="containerBody" class="body-main">
 	<!-- start header -->
 	<!-- top text start -->
 	
@@ -436,7 +436,7 @@ function fncDeletePeriodicalLoadPage() {
 										border="0" cellspacing="0" cellpadding="5">
 										<tr>
 											<td align="center" valign="middle"><img
-												src="<?php echo IMAGE_PATH ?>UserManagement-icon.png" width="103"
+												src="<?php echo IMAGE_PATH ?>UserManagement-icon.png" onclick="fncFineTodayLoadPage()" width="103"
 												height="101" alt="" /></td>
 											<td align="center" valign="middle"><img
 												src="<?php echo IMAGE_PATH ?>UploadFolder-icon.png" width="103" height="101"
