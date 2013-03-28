@@ -1,18 +1,51 @@
-<?php
-?>
 
-<script src="<?php echo JS_PATH?>/jquery-ui.js"></script>
-<link rel="stylesheet" href="<?php echo CSS_PATH?>/jquery-ui.css" />
+<script src="<?php echo JS_PATH?>jquery-ui.js"></script>
+<link rel="stylesheet" href="<?php echo CSS_PATH?>jquery-ui.css" />
 <script>
 
-$(function() {                    //to display calendar
+//$(function() {                    //to display calendar
 	$( "#datepicker" ).datepicker({
 		changeMonth: true,
 		changeYear: true
-	})
+	});
 
-});  
+//});  
+//$(function() {                    //to display calendar
+	$( "#datepicker1" ).datepicker({
+		changeMonth: true,
+		changeYear: true
+	});
 
+//});
+
+//$(function() {
+	$(".fine").click(function () {
+		$("#date").hide();
+	});
+
+//});
+
+//$(function() {
+	$("#betweenDates").click(function () {
+		//alert("hiii");
+		$("#date").show();
+	});
+//});
+
+	
+$("#show").click(function() {
+$.ajax({
+    url: '<?php  echo SITE_PATH?>index.php?controller=admin&function=Fine_Load',
+    success: function (response) {//response is value returned from php for your example it's "bye bye"
+        alert("here");
+      alert(response);
+    }
+ });
+});
+// function zz() {
+// 	document.getElementById("date").style.display='block';
+// 	//alert("hi");
+// }
 </script>
 <style>
 #rightDiv {
@@ -84,34 +117,42 @@ th {
 		</div>
 
 		<div id="rightDiv">
-			<form
-				action="<?php  echo SITE_PATH?>index.php?controller=admin&function=Fine_Load"
-				method="post">
+			<form >
+				
 				<table>
 					<tr>
 						ALL:
-						<input type="radio" name="fine" value="All" />
+						<input type="radio" class ="fine" name="fine" value="All" />
 					</tr>
 					</br>
 					<tr>
 						Last Month:
-						<input type="radio" name="fine" value="Last Month" />
+						<input type="radio"  class ="fine" name="fine" value="Last Month" />
 					</tr>
 					</br>
 					<tr>
 						Last week:
-						<input type="radio" name="fine" value="Last week" />
+						<input type="radio"  class ="fine" name="fine" value="Last week" />
 					</tr>
 					</br>
-				</table>
-				<p>
+					Between Dates:
+						<input type="radio" id="betweenDates" name="fine" value="Between Dates" >
+						<div id="date" style="display: none;"><p>
 
-					</td> <input type="text" id="datepicker"  name="date_of_birth" />
+					</td> <input type="text" id="datepicker"  name="date1" />
 
 				</p>
-				<input type="submit" value="show">
+				<p>
+
+					</td> <input type="text" id="datepicker1"  name="date2" />
+
+				</p>
+				</input>
+					</div>
+				
+				</table>
+				<input type="submit" value="show" id='show'>
 			</form>
 		</div>
 	</div>
-
 

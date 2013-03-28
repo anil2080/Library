@@ -8,7 +8,7 @@ require_once 'model/bookCopies.php';
 require_once 'model/mainSubject.php';
 require_once 'model/subject.php';
 ///xampp/phpnetbeans/library18/library18
-include_once($_SERVER['DOCUMENT_ROOT'].'/github/abc/Library/trunk/libr/library/common.inc.php');
+include_once($_SERVER['DOCUMENT_ROOT'].'/github/Library/trunk/libr/library/common.inc.php');
 
 if(isset($_GET['controller']) && !empty($_GET['controller'])){
 	$controller =$_GET['controller'];

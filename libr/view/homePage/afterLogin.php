@@ -77,12 +77,12 @@
 		});
 	}
 
-            function fncFineTodayLoadPage() {
+ function fncFineTodayLoadPage() {
             	
-        		$('#content').load('<?php echo SITE_PATH?>index.php?controller=admin&function=ImgFineToday_Click', function() {
-
-        		});
+        		$('#containerBody').load('<?php echo SITE_PATH?>index.php?controller=admin&function=ImgFineToday_Click', 
+                		function() {});
         	}
+	
 function fncAddPeriodicalLoadPage() {
         		
         		$('#content').load('<?php echo SITE_PATH?>index.php?controller=admin&function=viewPeriodical_Click', function() {
@@ -179,7 +179,7 @@ function fncDeletePeriodicalLoadPage() {
 	<!-- 	end menu -->
 
 	<!-- 	body start -->
-	<div class="bodyBG">
+	<div id="containerBody" class="bodyBG">
 
 		<!-- main left start	 -->
 		<div align="center" valign="top" style="width: 262px; padding: 15px; float: left;">

@@ -4,6 +4,11 @@
  
 class adminController {
 	
+	
+	public function authenticatelogin()
+	{
+		loadView('homePage/afterLogin.php');
+	}
 
 	public function MenuAddBook_Click() {
 // 		die("this is raman");
@@ -70,9 +75,15 @@ class adminController {
 	    loadView('Fine.php');
 	}
 	
-	public function Fine_Load() {
-	    die("hello");
+public function Fine_Load($value) {
+		if(isset($_POST)) {
+			$v=$_POST['fine'];
+		
+	    //die("hello");
+	  $h=loadModel('Fine', 'ValidFineRecord',$v); 
+	  echo $h;die;		}
 	}
+	
 
 public function viewPeriodical_Click() {
     	loadView('Periodical/AddPeriodical.php');
