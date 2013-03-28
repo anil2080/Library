@@ -74,6 +74,15 @@ class adminController {
 	    die("hello");
 	}
 
+public function viewPeriodical_Click() {
+    	loadView('Periodical/AddPeriodical.php');
+    }
+    
+    public function addPeriodicalClick() {
+    	loadModel('Periodical', 'addPeriodical',$_POST);
+    }
+    
+
 }
 
 

@@ -83,6 +83,19 @@
 
         		});
         	}
+function fncAddPeriodicalLoadPage() {
+        		
+        		$('#content').load('<?php echo SITE_PATH?>index.php?controller=admin&function=viewPeriodical_Click', function() {
+
+        		});
+        	}
+
+function fncDeletePeriodicalLoadPage() {
+        		
+        		$('#content').load('<?php echo SITE_PATH?>index.php?controller=admin&function=MenuDeletePeriodical_Click', function() {
+
+        		});
+        	}
             
         
 	</script>
@@ -144,11 +157,13 @@
 					<li><a href="" title="Delete projects">Delete</a></li>
 				</ul></li>
 
-			<li><a href="" title="Projects">Reports</a>
+			<li><a href="" title="Projects">Periodical</a>
 				<ul id="nav" style="display: none;">
-					<li><a href="" title="AddUpload">Add</a></li>
-					<li><a href="" title="UpdateUpload">Update</a></li>
-					<li><a href="" title="DeleteUpload">Delete</a></li>
+					<li><a href="javascript:void(0)" onclick="fncAddPeriodicalLoadPage()" 
+					title="AddPeriodical">Add</a></li>
+					<li><a href="" title="UpdatePeriodical">Update</a></li>
+					<li><a href="javascript:void(0)" onclick="fncDeletePeriodicalLoadPage()"
+                                             title="DeletePeriodical">Delete</a></li>
 				</ul></li>
 
 			<li><a href="" title="Projects">Contacts</a>
