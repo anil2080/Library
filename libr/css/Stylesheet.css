@@ -1,0 +1,183 @@
+body-main {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image:url(../images/HeaderBG.jpg);
+	background-repeat:repeat-x;
+	background-position:left top;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+}
+
+h3
+{
+	outline: none;
+}
+.bodyBG
+{
+	background-image:url(../images/HeaderBG.jpg);
+	background-repeat:repeat-x;
+	background-position:left -15px;
+	background-color:#fff;
+}
+.HLogName
+{
+	color:#052e5c;
+	padding:5px 0px;
+}
+a.HeadLink 
+{
+	color:#2ea9e5;
+	text-decoration:none;
+
+}
+a.HeadLink:hover
+{
+	color:#052e5c;
+	text-decoration:underline;
+}
+.HeadMSG
+{
+	color:#0a4f9f;
+	padding:5px 0px;
+	font-weight:bold;
+}
+.MenuBG
+{
+	background-image:url(../images/img07.jpg);
+	background-repeat:repeat-x;
+	background-position:left top;
+	background-color:#16B1B0;
+}
+a.MainMenuActive
+{
+	background-image:url(../images/Active-MenuBG.jpg);
+	background-repeat:repeat-x;
+	background-position:left top;
+	padding:10px 20px 0px 20px;
+	color:#000;
+	text-decoration:underline;
+	margin-top:0px;
+	height:23px;
+	display:block;
+}
+a.MainMenu
+{
+	background-image:url(../images/DeActive-MenuBG.jpg);
+	background-repeat:repeat-x;
+	background-position:left top;
+	color:#fff;
+	border:1px;
+	text-decoration:none;
+	font-weight:bold;
+	padding:10px 20px 0px 20px;
+	margin-top:0px;
+	height:23px;
+	display:block;
+}
+a.MainMenu:hover
+{
+	background-image:url(../images/Active-MenuBG.jpg);
+	background-repeat:repeat-x;
+	background-position:left top;
+	padding:10px 20px 0px 20px;
+	color:#000;
+	text-decoration:underline;
+}
+.SubTab td
+{
+	padding:0px 15px;
+}
+img
+{
+	border:0px;
+}
+.BlueBG
+{
+	background-color:#16B1B0;
+	color:#fff;
+}
+.Time
+{
+	font-size:time;
+	font-size:26px;
+}
+.CalenderBot
+{
+	background-color:#d1e3ed;
+	border-bottom:solid 1px #c1d0d7
+}
+a.ClanderLnk
+{
+	color:#16B1B0;
+	text-decoration:none;
+}
+a.ClanderLnk:hover
+{
+	color:#16B1B0;
+	text-decoration:underline;
+}
+.PanelHead
+{
+	background-image:url(../images/img07.jpg);
+	background-repeat:repeat-x;
+	background-position:left bottom;
+	color:#bfebff;
+	font-size:18px;
+	padding-left:10px;
+	width:100%;
+}
+.PanelBorder
+{
+	border:1px solid #b0b0b0;
+	border-top:0px solid #b0b0b0;
+	background-color:#dfe7ea;
+	padding:15px;
+}
+.PanelBorder1
+{
+	border:1px solid #b0b0b0;
+	border-top:1px solid #b0b0b0;
+	background-color:#dfe7ea;
+}
+.MainGrid
+{
+	background-image:url(../images/mainGrid.gif);
+	background-repeat:repeat-x;
+	background-position:left top;
+	height:25px;
+}
+.AltGrid
+{
+	background-image:url(../images/AltGrid.gif);
+	background-repeat:repeat-x;
+	background-position:left top;
+	height:25px;
+}
+body {
+	font-size: 62.5%;
+	font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+}
+
+table {
+	font-size: 1em;
+}
+
+.demo-description {
+	clear: both;
+	padding: 12px;
+	font-size: 1.3em;
+	line-height: 1.4em;
+}
+
+.ui-draggable, .ui-droppable {
+	background-position: top;
+}
+
+#righttop
+{
+	background-color:#dfe7ea;
+	
+}
+
